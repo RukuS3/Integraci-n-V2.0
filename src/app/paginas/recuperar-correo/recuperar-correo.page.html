@@ -1,3 +1,9 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title class="text">Centro de salud</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content class="ion-padding fondo-login">
   <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
     <div class="card shadow rounded-4 p-4 w-100" style="max-width: 420px; background-color: rgba(255, 255, 255, 0.95);">
@@ -15,7 +21,14 @@
         </div>
 
         <div class="text-center mt-4">
-          <button type="submit" class="btn btn-primary w-100">Recuperar correo</button>
+          <form (ngSubmit)="enviarCorreo()">
+            <!-- input correo -->
+            <button type="submit" class="btn btn-primary w-100">Recuperar correo</button>
+          </form>
+          
+          <div *ngIf="mostrarMensaje" class="alert alert-success text-center mt-3" role="alert">
+            Se ha enviado un enlace a tu correo (si está registrado).
+          </div>
         </div>
       </form>
     </div>

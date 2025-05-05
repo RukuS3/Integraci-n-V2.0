@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
-    standalone: false,
+  standalone: false,
 })
 export class LoginPage implements OnInit {
   email: string = '';
@@ -34,6 +34,16 @@ export class LoginPage implements OnInit {
     } else {
       alert('Correo o contraseña incorrectos');
     }
+  }
+  mostrarMensaje = false;
+
+  entrar() {
+    this.mostrarMensaje = true;
+
+    // Aquí podrías agregar lógica real más adelante...
+    setTimeout(() => {
+      this.mostrarMensaje = false;
+    }, 3000); // Oculta el mensaje después de 3 segundos
   }
 }
 function login() {

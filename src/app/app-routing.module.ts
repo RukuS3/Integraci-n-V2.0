@@ -12,13 +12,13 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'recuperar-correo',
-    loadChildren: () => import('./paginas/recuperar-correo/recuperar-correo.module').then( m => m.RecuperarCorreoPageModule)
+    path: 'reset-password',
+    loadChildren: () => import('./paginas/reset-password/reset-password.module').then(m => m.ResetPasswordPageModule)
   },
   {
-    path: 'reset-password',
-    loadChildren: () => import('./paginas/reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
-  },
+    path: 'recuperar-correo',
+    loadChildren: () => import('./paginas/recuperar-correo/recuperar-correo.module').then(m => m.RecuperarCorreoPageModule)
+  }
 ];
 
 @NgModule({
